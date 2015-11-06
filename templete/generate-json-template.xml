@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object uname="hellokitty@hotmail.com" key="caa9532e3b14f973773b198fdddb47bf">
+
+	<!-- 布尔型数据两种展示方式 -->
+	<boolean key="isChecked" type="default" default="false" />
+	<boolean key="isSelected" type="0" default="0" />
+
+	<string key="title" max-length="128" default="" />
+	<string key="article" default="" />
+
+	<!-- 数值型数据不允许小于零 -->
+	<integer key="age" min="0" />
+	<!-- 指定范围内的数值 -->
+	<integer key="score" min="0" max="200" />
+	<!-- max min 的优先级 更高 如存在 values 不要设置 min 和 max -->
+	<integer key="inNum" values="10,21,32,43,54" />
+
+	<double key="PI" />
+
+	<array key="arr1" type="integer" length="3" />
+	<array key="arr2" type="double" length="4" />
+	<array key="arr3" type="boolean" length="5" />
+	<array key="arr4" type="string" length="8" />
+
+</object>
