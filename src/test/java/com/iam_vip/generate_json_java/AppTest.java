@@ -1,38 +1,45 @@
 package com.iam_vip.generate_json_java;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Map;
+
+import org.junit.Test;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+public class AppTest {
+	
+	
+	@Test
+	public void run() throws IOException {
+		
+		BufferedReader reader = new BufferedReader( new FileReader( "E:\\tmp\\json.txt" ) );
+		reader.readLine();
+		String json = reader.readLine();
+		reader.close();
+		
+		System.out.println( "Json: " + json );
+		
+		JsonElement je = new JsonParser().parse( json );
+		boolean jnull = je.isJsonNull(), jobj = je.isJsonObject(), jarr = je.isJsonArray();
+		
+		System.out.println( jnull + " -- " + jobj + " -- " + jarr );
+		
+		if ( jobj ) {
+			
+			JsonObject obj = je.getAsJsonObject();
+			for ( Map.Entry< String, JsonElement > item : obj.entrySet() ) {
+				// item.getKey()
+			}
+		}
+		
+	}
+	
 }

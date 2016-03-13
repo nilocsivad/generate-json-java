@@ -9,22 +9,20 @@ import org.junit.Test;
 
 /**
  * @author Colin
- *
+ *		
  */
 public class GenerateJsonOutput {
-
+	
 	/**
 	 * 
 	 */
-	public GenerateJsonOutput() {
-		// TODO Auto-generated constructor stub
-	}
-
+	public GenerateJsonOutput() {}
+	
 	@Test
 	public void output() {
-
+		
 		System.err.println( Pattern.matches( "(\\d)|([\\d,]*\\d)", "10,21,32,43,54" ) );
-
+		
 	}
 	
 	
@@ -36,18 +34,4 @@ public class GenerateJsonOutput {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
