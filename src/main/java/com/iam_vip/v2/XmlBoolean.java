@@ -11,7 +11,7 @@ import org.dom4j.Element;
 /**
  * @author Colin
  */
-public class XmlDataBoolean extends XmlObject {
+public class XmlBoolean extends XmlObject {
 
 	/**
 	 * 
@@ -27,7 +27,7 @@ public class XmlDataBoolean extends XmlObject {
 	/**
 	 * 
 	 */
-	public XmlDataBoolean() {
+	public XmlBoolean() {
 	}
 
 	private String type;
@@ -37,9 +37,10 @@ public class XmlDataBoolean extends XmlObject {
 	 * @see com.iam_vip.v2.XmlObject#parse(org.dom4j.Element)
 	 */
 	@Override
-	public void parse(Element element) {
+	public XmlBoolean parse(Element element) {
 		String val = element.attributeValue("type");
 		this.type = (TYPES.contains(val)) ? val : "default";
+		return this;
 	}
 
 	/*
@@ -47,7 +48,7 @@ public class XmlDataBoolean extends XmlObject {
 	 * @see com.iam_vip.v2.XmlObject#value()
 	 */
 	@Override
-	public Object value() {
+	public Object value() throws Exception {
 
 		long r2 = System.currentTimeMillis() % 2;
 

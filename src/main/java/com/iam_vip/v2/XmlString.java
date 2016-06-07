@@ -12,7 +12,7 @@ import org.dom4j.Element;
 /**
  * @author Colin
  */
-public class XmlDataString extends XmlObject {
+public class XmlString extends XmlObject {
 
 	/**
 	 * 
@@ -27,7 +27,7 @@ public class XmlDataString extends XmlObject {
 	/**
 	 * 
 	 */
-	public XmlDataString() {
+	public XmlString() {
 	}
 
 	private int maxLength = Integer.MAX_VALUE;
@@ -37,13 +37,14 @@ public class XmlDataString extends XmlObject {
 	 * @see com.iam_vip.v2.XmlObject#parse(org.dom4j.Element)
 	 */
 	@Override
-	public void parse(Element element) {
+	public XmlString parse(Element element) {
 
 		String max_attr = element.attributeValue("max-length");
 		if (max_attr != null && !"".equals(max_attr)) {
 			this.maxLength = Integer.parseInt(max_attr);
 		}
 
+		return this;
 	}
 
 	/*
@@ -51,7 +52,7 @@ public class XmlDataString extends XmlObject {
 	 * @see com.iam_vip.v2.XmlObject#value()
 	 */
 	@Override
-	public Object value() {
+	public Object value() throws Exception {
 
 		int len = this.maxLength == Integer.MAX_VALUE ? 500 : this.maxLength;
 		int toLen = new Random().nextInt(len);

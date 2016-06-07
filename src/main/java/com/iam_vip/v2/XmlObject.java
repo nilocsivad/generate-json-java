@@ -23,8 +23,8 @@ public abstract class XmlObject implements Serializable {
 	public XmlObject() {
 	}
 
-	public abstract void parse(Element element);
+	public abstract XmlObject parse(Element element);
 
-	public abstract Object value();
+	public abstract Object value() throws Exception;
 
 }

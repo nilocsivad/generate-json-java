@@ -1,81 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <object>
 
-	<!-- 布尔型数据两种展示方式 -->
-	<boolean key="isChecked" type="default" default="false" />
-	<boolean key="isSelected" type="0" default="0" />
-
-	<string key="title" max-length="128" default="" />
-	<string key="article" default="" />
-
-	<!-- 数值型数据不允许小于零 -->
-	<integer key="age" min="0" />
-	<!-- 指定范围内的数值 -->
-	<integer key="score" min="0" max="200" />
-	<!-- max min 的优先级 更高 如存在 values 不要设置 min 和 max -->
+	<boolean key="isChecked" type="default" />
+	<boolean key="isSelected" type="number" />
+	<string key="title" max-length="128" />
+	<string key="article" />
+	<integer key="age" min="0" max="200" />
+	<integer key="score" min="0" max="100" />
+	<integer key="percent" min="0" max="100" precision="2" />
 	<integer key="inNum" values="10,21,32,43,54" />
+	<double key="PI" min="0" />
 
-	<double key="PI" />
-
-	<array key="arr1" type="integer" length="3" />
-	<array key="arr2" type="double" length="4" />
-	<array key="arr3" type="boolean" length="5" />
-	<array key="arr4" type="string" length="8" />
+	<array key="arr1" length="3">
+		<integer key="age" min="0" max="200" />
+	</array>
+	<array key="arr2" length="4">
+		<boolean key="isSelected" type="number" />
+	</array>
+	<array key="arr3" length="5">
+		<string key="title" max-length="128" />
+	</array>
+	<array key="arr4" length="8">
+		<integer key="inNum" values="10,21,32,43,54" />
+	</array>
 
 	<object key="cat">
-		<boolean key="isChecked" type="default" default="false" />
-		<boolean key="isSelected" type="0" default="0" />
-		<string key="title" max-length="32" default="" />
-		<integer key="age" min="0" />
-		<integer key="score" min="0" max="200" />
+		<boolean key="isChecked" type="default" />
+		<boolean key="isSelected" type="number" />
+		<string key="title" max-length="128" />
+		<string key="article" />
+		<integer key="age" min="0" max="200" />
+		<integer key="score" min="0" max="100" />
+		<integer key="percent" min="0" max="100" precision="2" />
 		<integer key="inNum" values="10,21,32,43,54" />
-		<double key="PI" />
-		<array key="arr1" type="integer" length="3" />
-		<array key="arr2" type="double" length="4" />
-		<array key="arr3" type="boolean" length="5" />
-		<array key="arr4" type="string" length="8" />
+		<double key="PI" min="0" />
+
 		<list key="dog" length="5">
-			<boolean key="isChecked" type="default" default="false" />
-			<boolean key="isSelected" type="0" default="0" />
-			<string key="title" max-length="128" default="" />
-			<string key="article" default="" />
-			<integer key="age" min="0" />
-			<integer key="score" min="0" max="200" />
+			<boolean key="isChecked" type="default" />
+			<boolean key="isSelected" type="number" />
+			<string key="title" max-length="128" />
+			<string key="article" />
+			<integer key="age" min="0" max="200" />
+			<integer key="score" min="0" max="100" />
+			<integer key="percent" min="0" max="100" precision="2" />
 			<integer key="inNum" values="10,21,32,43,54" />
-			<double key="PI" />
-			<array key="arr1" type="integer" length="3" />
-			<array key="arr2" type="double" length="4" />
-			<array key="arr3" type="boolean" length="5" />
-			<array key="arr4" type="string" length="8" />
+			<double key="PI" min="0" />
+			<list key="dog" length="5">
+				<boolean key="isChecked" type="default" />
+				<boolean key="isSelected" type="number" />
+				<string key="title" max-length="128" />
+				<string key="article" />
+				<integer key="age" min="0" max="200" />
+				<integer key="score" min="0" max="100" />
+				<integer key="percent" min="0" max="100" precision="2" />
+				<integer key="inNum" values="10,21,32,43,54" />
+				<double key="PI" min="0" />
+			</list>
 		</list>
 	</object>
 
 	<list key="dog" length="5">
-		<boolean key="isChecked" type="default" default="false" />
-		<boolean key="isSelected" type="0" default="0" />
-		<string key="title" max-length="128" default="" />
-		<string key="article" default="" />
-		<integer key="age" min="0" />
-		<integer key="score" min="0" max="200" />
+		<boolean key="isChecked" type="default" />
+		<boolean key="isSelected" type="number" />
+		<string key="title" max-length="128" />
+		<string key="article" />
+		<integer key="age" min="0" max="200" />
+		<integer key="score" min="0" max="100" />
+		<integer key="percent" min="0" max="100" precision="2" />
 		<integer key="inNum" values="10,21,32,43,54" />
-		<double key="PI" />
-		<array key="arr1" type="integer" length="3" />
-		<array key="arr2" type="double" length="4" />
-		<array key="arr3" type="boolean" length="5" />
-		<array key="arr4" type="string" length="8" />
-		<object key="cat">
-			<boolean key="isChecked" type="default" default="false" />
-			<boolean key="isSelected" type="0" default="0" />
-			<string key="title" max-length="32" default="" />
-			<integer key="age" min="0" />
-			<integer key="score" min="0" max="200" />
-			<integer key="inNum" values="10,21,32,43,54" />
-			<double key="PI" />
-			<array key="arr1" type="integer" length="3" />
-			<array key="arr2" type="double" length="4" />
-			<array key="arr3" type="boolean" length="5" />
-			<array key="arr4" type="string" length="8" />
-		</object>
+		<double key="PI" min="0" />
 	</list>
 
 </object>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list size="30">
+<list size="10">
 
 	<!-- 布尔型数据两种展示方式 -->
 	<boolean key="isChecked" type="default" />
@@ -9,7 +9,7 @@
 	<string key="article" />
 
 	<!-- 数值型数据不允许小于零 -->
-	<integer key="age" min="0" />
+	<integer key="age" min="0" max="200" />
 	<!-- 指定范围内的数值 -->
 	<integer key="score" min="0" max="100" />
 	<!-- 指定范围内的数值 -->
@@ -17,6 +17,6 @@
 	<!-- max min 的优先级 更高 如存在 values 不要设置 min 和 max -->
 	<integer key="inNum" values="10,21,32,43,54" />
 
-	<double key="PI" />
+	<double key="PI" min="0" />
 
 </list>
