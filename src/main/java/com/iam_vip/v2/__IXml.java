@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public interface __IXml {
 
-	int LENGTH = 30;
+	int LENGTH = 10;
 
 	Map<List<String>, Class<?>> ROOT = new HashMap<List<String>, Class<?>>(3);
 	Map<List<String>, Class<?>> DATA = new HashMap<List<String>, Class<?>>(6);

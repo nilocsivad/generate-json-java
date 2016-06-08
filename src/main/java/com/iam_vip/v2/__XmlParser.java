@@ -46,7 +46,7 @@ public class __XmlParser implements __IXml {
 
 
 
-		String xml = "templete/template-full.xml";
+		String xml = "templete/template-full-list.xml";
 		File xmlFile = new File(xml);
 
 		SAXReader saxReader = new SAXReader();
@@ -80,7 +80,7 @@ public class __XmlParser implements __IXml {
 		String json = gson.toJson(object).trim();
 		System.out.println(json);
 
-		FileWriter fw = new FileWriter(String.format("E:\\tmp\\gj-%d.txt", System.currentTimeMillis()));
+		FileWriter fw = new FileWriter(String.format("E:\\tmp\\json-%d.txt", System.currentTimeMillis()));
 		fw.write("\r\n");
 		fw.write(json);
 		fw.write("\r\n");
