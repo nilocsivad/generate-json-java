@@ -3,7 +3,7 @@
 
 	<boolean key="isChecked" type="default" />
 	<boolean key="isSelected" type="number" />
-	<string key="title" max-length="128" />
+	<string key="title" max-size="128" />
 	<string key="article" />
 	<integer key="age" min="0" max="200" />
 	<integer key="score" min="0" max="100" />
@@ -11,23 +11,23 @@
 	<integer key="inNum" values="10,21,32,43,54" />
 	<double key="PI" min="0" />
 
-	<array key="arr1" length="3">
+	<array key="arr1" size="3">
 		<integer key="age" min="0" max="200" />
 	</array>
-	<array key="arr2" length="4">
-		<boolean key="isSelected" type="number" />
+	<array key="arr2" size="4">
+		<boolean key="isSelected" />
 	</array>
-	<array key="arr3" length="5">
-		<string key="title" max-length="128" />
+	<array key="arr3" size="5">
+		<string key="title" max-size="128" />
 	</array>
-	<array key="arr4" length="8">
+	<array key="arr4" size="8">
 		<integer key="inNum" values="10,21,32,43,54" />
 	</array>
 
 	<object key="cat">
 		<boolean key="isChecked" type="default" />
 		<boolean key="isSelected" type="number" />
-		<string key="title" max-length="128" />
+		<string key="title" max-size="128" />
 		<string key="article" />
 		<integer key="age" min="0" max="200" />
 		<integer key="score" min="0" max="100" />
@@ -35,20 +35,20 @@
 		<integer key="inNum" values="10,21,32,43,54" />
 		<double key="PI" min="0" />
 
-		<list key="dog" length="5">
+		<list key="dog" size="5">
 			<boolean key="isChecked" type="default" />
 			<boolean key="isSelected" type="number" />
-			<string key="title" max-length="128" />
+			<string key="title" max-size="128" />
 			<string key="article" />
 			<integer key="age" min="0" max="200" />
 			<integer key="score" min="0" max="100" />
 			<integer key="percent" min="0" max="100" precision="2" />
 			<integer key="inNum" values="10,21,32,43,54" />
 			<double key="PI" min="0" />
-			<list key="dog" length="5">
+			<list key="dog" size="5">
 				<boolean key="isChecked" type="default" />
 				<boolean key="isSelected" type="number" />
-				<string key="title" max-length="128" />
+				<string key="title" max-size="128" />
 				<string key="article" />
 				<integer key="age" min="0" max="200" />
 				<integer key="score" min="0" max="100" />
@@ -59,10 +59,10 @@
 		</list>
 	</object>
 
-	<list key="dog" length="5">
+	<list key="dog" size="5">
 		<boolean key="isChecked" type="default" />
 		<boolean key="isSelected" type="number" />
-		<string key="title" max-length="128" />
+		<string key="title" max-size="128" />
 		<string key="article" />
 		<integer key="age" min="0" max="200" />
 		<integer key="score" min="0" max="100" />

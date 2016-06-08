@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 /**
  * @author Colin
  */
-public class __XmlParser implements __Xml {
+public class __XmlParser implements __IXml {
 
 	static {
 

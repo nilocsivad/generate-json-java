@@ -5,6 +5,7 @@ package com.iam_vip.v2;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import org.dom4j.Element;
 
@@ -50,7 +51,7 @@ public class XmlBoolean extends XmlObject {
 	@Override
 	public Object value() throws Exception {
 
-		long r2 = System.currentTimeMillis() % 2;
+		long r2 = new Random().nextInt() % 2;
 
 		Object result = false;
 

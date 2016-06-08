@@ -13,7 +13,7 @@ import org.dom4j.Element;
 /**
  * @author Colin
  */
-public class XmlMap extends XmlObject implements __Xml {
+public class XmlMap extends XmlObject implements __IXml {
 
 	/**
 	 * 

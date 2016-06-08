@@ -14,7 +14,7 @@ import org.dom4j.Element;
 /**
  * @author Colin
  */
-public class XmlList extends XmlObject implements __Xml {
+public class XmlList extends XmlObject implements __IXml {
 
 	/**
 	 * 
@@ -57,17 +57,16 @@ public class XmlList extends XmlObject implements __Xml {
 	@Override
 	public Object value() throws Exception {
 
-		List<Object> list = new ArrayList<Object>(size + 1);
+		List<Object> list = new ArrayList<Object>(this.size + 1);
 
-		for (int i = 0; i < size; ++i) {
+		if (this.elements.size() == 1) { // List with value
 
-			// 数据项
-			Map<String, Object> item = new HashMap<String, Object>(elements.size() + 1);
+			Element element = this.elements.get(0);
 
-			for (Element element : elements) {
+			String elementName = element.getName();
 
-				String elementName = element.getName();
-				String elementKey = element.attributeValue("key");
+			for (int i = 0; i < this.size; ++i) {
+
 				XmlObject data = null;
 
 				for (List<String> key : DATA.keySet()) {
@@ -79,14 +78,44 @@ public class XmlList extends XmlObject implements __Xml {
 				}
 
 				if (data != null) {
-					item.put(elementKey, data.value());
+					list.add(data.value());
 				}
+			}
 
-			} // for (Element element : elements) {}
+			// List with value
+		}
+		else {
 
-			list.add(item);
+			for (int i = 0; i < this.size; ++i) {
 
-		} // Root Element List Size
+				// 数据项
+				Map<String, Object> item = new HashMap<String, Object>(this.elements.size() + 1);
+
+				for (Element element : this.elements) {
+
+					String elementName = element.getName();
+					String elementKey = element.attributeValue("key");
+					XmlObject data = null;
+
+					for (List<String> key : DATA.keySet()) {
+						if (key.contains(elementName)) {
+							data = (XmlObject) DATA.get(key).newInstance();
+							data.parse(element);
+							break;
+						}
+					}
+
+					if (data != null) {
+						item.put(elementKey, data.value());
+					}
+
+				} // for (Element element : elements) {}
+
+				list.add(item);
+
+			} // Root Element List Size
+
+		} // List with object
 
 		return list;
 	}
