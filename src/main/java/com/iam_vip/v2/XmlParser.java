@@ -12,11 +12,16 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import com.google.gson.Gson;
+import com.iam_vip.v2.type.XmlBoolean;
+import com.iam_vip.v2.type.XmlList;
+import com.iam_vip.v2.type.XmlMap;
+import com.iam_vip.v2.type.XmlNumber;
+import com.iam_vip.v2.type.XmlString;
 
 /**
  * @author Colin
  */
-public class __XmlParser implements __IXml {
+public class XmlParser implements __IXml {
 
 	static {
 
@@ -33,7 +38,7 @@ public class __XmlParser implements __IXml {
 	/**
 	 * 
 	 */
-	public __XmlParser() {
+	public XmlParser() {
 	}
 
 	/**
@@ -67,14 +72,15 @@ public class __XmlParser implements __IXml {
 			System.out.println("null");
 		}
 
-		obj2json(result);
-
+		
+		toJson(result);
+		System.out.println(result);
 
 
 		System.out.println(System.currentTimeMillis());
 	}
 
-	public static void obj2json(Object object) throws IOException {
+	public static void toJson(Object object) throws IOException {
 
 		Gson gson = new Gson();
 		String json = gson.toJson(object).trim();

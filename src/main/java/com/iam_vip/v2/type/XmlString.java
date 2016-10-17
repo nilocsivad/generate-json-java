@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.iam_vip.v2;
+package com.iam_vip.v2.type;
 
 import java.util.Arrays;
 import java.util.List;
